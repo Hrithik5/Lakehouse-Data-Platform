@@ -318,3 +318,17 @@ The primary objective was to build a complete, functional Lakehouse pipeline whi
 Where trade-offs were necessary, priority was given to implementing core data engineering concepts correctly rather than adding production features that would significantly increase complexity without introducing new learning outcomes.
 
 These enhancements are identified as future improvements and can be incorporated as the project evolves.
+
+## Why use Delta Lake across Bronze, Silver, and Gold instead of mixing file formats?
+
+Using a single storage format across all layers keeps the architecture consistent and simplifies the ETL pipeline.
+
+This avoids unnecessary format conversions while ensuring every layer benefits from Delta Lake features such as ACID transactions and schema enforcement.
+
+## Why is the ETL logic separated from Apache Airflow?
+
+The ETL pipeline was designed as a standalone Python application, with Airflow responsible only for orchestration.
+
+This separation allows the pipeline to be executed independently for local development, testing, or future orchestration tools without changing the ETL implementation.
+
+Keeping business logic independent of the scheduler improves maintainability, testability, and portability.
