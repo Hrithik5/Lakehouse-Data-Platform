@@ -254,7 +254,6 @@ ORDER BY total_customers DESC;
 
 - CI/CD pipeline using GitHub Actions
 - Automated data quality monitoring
-- Unit and integration testing
 - Infrastructure provisioning with Terraform
 - Power BI dashboard enhancements
 - Streaming ingestion using Apache Kafka
