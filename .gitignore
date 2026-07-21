@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+
+.vscode/
+.idea/
+
+.env
+
+logs/
+data/bronze/
+data/silver/
+data/gold/
+
+.DS_Store
+.ipynb_checkpoints/
